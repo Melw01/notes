@@ -56,3 +56,8 @@ graph TD;
     M--Yes-->N[Lift state up to first common parent];
     M--No-->O[Probably global state];
 ```
+
+## Lifting Up State
+
+- By **lifting state up**, we successfully shared one piece of state with multiple components in different positions in the component tree.
+- **Child-to-parent communication** (inverse data flow): child updating parent state (data flowing "up") by putting a setter into the child.
