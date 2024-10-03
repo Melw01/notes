@@ -61,3 +61,29 @@ graph TD;
 
 - By **lifting state up**, we successfully shared one piece of state with multiple components in different positions in the component tree.
 - **Child-to-parent communication** (inverse data flow): child updating parent state (data flowing "up") by putting a setter into the child.
+
+## Deriving State
+
+- **Derived State**: state that is computed from an existing piece of state or from props
+- Derived states are calculated from another state, so just use regular variables, not _useState_
+- The original state will be the **single source of truth** for this related data
+- Works because re-rendering component will **automatically recalculate** derived state
+
+## The Children Prop
+
+```js
+<Button onClick={previous}>
+  <span>👈</span>Previous
+</Button>
+```
+
+- In this example, the **children** of the button is:
+
+```js
+<span>👈</span>Previous
+```
+
+- Children prop is accessible through **props.children**
+- The children prop allow us \*\*to pas JSX into an element (besides regular props)
+- Essential tool to make **reusable** and **configurable** components (especially component **content**)
+- Really useful for **generic** component that **don't know their content** before being used (e.g. modal)
