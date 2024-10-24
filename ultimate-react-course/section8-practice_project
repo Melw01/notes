@@ -1,0 +1,8 @@
+# Section 8 [Optional] Practice Project: Eat-N-Split
+
+### Prop Drilling
+
+Whenever we have a component that doesn't actually need a prop, but all it does is to pass it down into one of its childre
+
+### Controlled Elements
+Elements that are entirely controlled by React components 
